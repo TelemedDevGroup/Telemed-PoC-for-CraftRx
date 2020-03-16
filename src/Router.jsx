@@ -6,7 +6,6 @@ export const Routers = () => {
   return (
     <Switch>
       <Route exact path="/schedule" component={Schedule}></Route>
-      <Redirect from="/" to="schedule" />
     </Switch>
   );
 };
