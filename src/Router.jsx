@@ -1,6 +1,6 @@
 import React from "react";
 import { Schedule } from "./components/Schedule";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 export const Routers = () => {
   return (
