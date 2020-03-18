@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './home_page.css';
-import { Button, Form, Grid, Header, Image, Message, Segment, Divider, List } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment, Divider, List } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import AccountAPI from './test_data/test_users.js'
 
