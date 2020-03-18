@@ -54,9 +54,6 @@ class HomePage extends Component {
 
               <Divider vertical> Or </Divider>
             </Segment>
-            <Message>
-              New to us?  <a href='#'> Sign Up</a>
-            </Message>
           </Grid.Column>
         </Grid>
 

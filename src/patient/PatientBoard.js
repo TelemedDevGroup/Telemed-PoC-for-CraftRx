@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { Header, Menu, Container, Label, Tab, Icon } from 'semantic-ui-react'
 import DemoCalendar from './../components/DemoCalendar.js'
 import PatientToDo from './PatientToDo.js'
-import AccountAPI from './../test_data/test_users.js'
 
 const BoardPanes = [
   {
