@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Switch, Route } from "react-router-dom";
-import { Header, Grid, Segment, Menu, Dropdown, Container, Image } from 'semantic-ui-react'
+import { Header, Segment, Menu, Dropdown, Container, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import DoctorBoard from './../doctor/DoctorBoard.js'
 import PatientBoard from './../patient/PatientBoard.js'
@@ -55,7 +55,6 @@ class HeaderMenu extends Component {
                       <Dropdown.Item><a href="https://github.com/nguymin4/react-videocall">React videocall component</a></Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown.Item>
-                  <Dropdown.Item><a href="https://react.semantic-ui.com/">Semantic UI for react</a></Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Container>

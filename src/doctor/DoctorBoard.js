@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Header, Grid, Segment, Menu, Container, Label, Tab, Icon } from 'semantic-ui-react'
+import { Header, Menu, Container, Label, Tab, Icon } from 'semantic-ui-react'
 import DemoCalendar from './../components/DemoCalendar.js'
 import DoctorToDo from './DoctorToDo.js'
 import AccountAPI from './../test_data/test_users.js'
@@ -60,8 +60,8 @@ class DoctorBoard extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const user = AccountAPI.get( this.props.match.params.userID );
-    const { activeItem } = this.state
+    //const user = AccountAPI.get( this.props.match.params.userID );
+    //const { activeItem } = this.state
     return (
       <Container  style={{  marginTop: '5em' }}>
           <Header as='h3' >
