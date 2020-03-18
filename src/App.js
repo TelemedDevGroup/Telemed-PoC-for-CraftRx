@@ -1,14 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import "./App.css";
-import { Routers } from "./Router";
+import React, {Component} from 'react';
+import './App.css';
+import HomePage from './home_page.js'
 
-const App = () => {
-  return (
-    <Router>
-      <Routers />
-    </Router>
-  );
-};
+
+class App extends Component {
+  render() {
+    return (
+      <HomePage />
+    );
+  }
+}
 
 export default App;
