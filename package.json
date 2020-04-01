@@ -1,7 +1,8 @@
-{
-  "name": "react_basic",
-  "version": "0.1.0",
+e{
+  "name": "telemedicine demo",
+  "version": "0.2.0",
   "private": true,
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "dependencies": {
     "@syncfusion/ej2-react-schedule": "^17.4.55",
     "@testing-library/jest-dom": "^4.2.4",
