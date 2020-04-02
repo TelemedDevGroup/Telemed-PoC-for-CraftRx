@@ -15,8 +15,8 @@ class HomePage extends Component {
     return (
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 650 }}>
-            <Header as='h2' color='teal' textAlign='center'>Welcome to Telemedicine Demo  .
-              <Image src='./logo_small.png' />
+            <Header as='h2' color='teal' textAlign='center'>Welcome to Telemedicine Demo &nbsp;&nbsp;
+              <Image src='./telemed-logo.png' />
             </Header>
             <Segment placeholder>
               <Grid columns={2} relaxed='very' stackable>
@@ -42,7 +42,7 @@ class HomePage extends Component {
                   <List floated='left'>
                   { AccountAPI.all().map( (user, index) => (
                         <List.Item
-                          icon='user'
+                          icon={user.user_type === "Doctor" ? "doctor" : "user"}
                           key={user.id}
                           content={ <Link to={calcPasth2Board(user)}> {user.user_type}: {user.name}  </Link> }
                         />
@@ -54,6 +54,7 @@ class HomePage extends Component {
 
               <Divider vertical> Or </Divider>
             </Segment>
+            <Header as='h4' color='teal' textAlign='center'>v{process.env.REACT_APP_DEMO_VERSION}  </Header>
           </Grid.Column>
         </Grid>
 
