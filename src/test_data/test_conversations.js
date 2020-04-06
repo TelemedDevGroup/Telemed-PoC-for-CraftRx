@@ -11,6 +11,12 @@ const TEST_CONVERSATIONS = {
         { sender: "Pavel", message: "Will be late for 5 min" },
         { sender: "Sophy", message: "Hi, Pavel", partner: true },
         { sender: "Sophy", message: "No problem", partner: true },
+        {
+          sender: "Sophy",
+          message: "",
+          partner: true,
+          attachment: "/chatImages/01.jpg",
+        },
         { sender: "Pavel", message: "Thanks" },
       ],
     },
@@ -23,7 +29,18 @@ const TEST_CONVERSATIONS = {
       dialog: [
         { sender: "Aibolit", message: "How are your feeling?", partner: true },
         { sender: "Pavel", message: "I feel much better" },
+        {
+          sender: "Pavel",
+          message: "",
+          attachment: "/chatImages/02.jpg",
+        },
         { sender: "Aibolit", message: "Glad to hear!", partner: true },
+        {
+          sender: "Aibolit",
+          message: "Watch",
+          partner: true,
+          attachment: "/chatImages/03.jpg",
+        },
       ],
     },
     {

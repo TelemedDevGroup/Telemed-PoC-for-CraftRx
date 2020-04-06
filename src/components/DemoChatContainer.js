@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { List, Message, Input, Grid, Header, Button } from "semantic-ui-react";
+import {
+  List,
+  Message,
+  Input,
+  Grid,
+  Header,
+  Button,
+  Image,
+} from "semantic-ui-react";
 
 const DemoChatContainer = ({ chatsData, partner, onClick }) => {
   let [inputData, setInputData] = useState("");
@@ -14,7 +22,12 @@ const DemoChatContainer = ({ chatsData, partner, onClick }) => {
             height: "700px",
           }}
         >
-          <Grid columns={2} verticalAlign="middle" relaxed="very" padded="vertically">
+          <Grid
+            columns={2}
+            verticalAlign="middle"
+            relaxed="very"
+            padded="vertically"
+          >
             <Grid.Column>
               <Header as="h3">{partner}</Header>
             </Grid.Column>
@@ -30,14 +43,21 @@ const DemoChatContainer = ({ chatsData, partner, onClick }) => {
           </Grid>
           <List
             style={{
-              height: "90%",
+              height: "80%",
               overflowY: "auto",
             }}
           >
             {chatsData.map((message, index) => (
               <Message info={message.partner} size="small" key={index}>
                 <Message.Header>{message.sender}</Message.Header>
-                <p>{message.message}</p>
+                {message.attachment && (
+                  <Image
+                    size="medium"
+                    style={{ padding: "1.5em" }}
+                    src={message.attachment}
+                  ></Image>
+                )}
+                {message.message && <p>{message.message}</p>}
               </Message>
             ))}
           </List>
