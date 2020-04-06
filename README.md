@@ -1,10 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Telemedicine PoC for CraftFx
 
+This is **UI App for Telemedicine PoC** based on React framework
+*with usage of Semantic UI for React*
 
-In the project directory, you can run:
+The latest demo code is running here http://telemed-poc.us-east-2.elasticbeanstalk.com/
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
