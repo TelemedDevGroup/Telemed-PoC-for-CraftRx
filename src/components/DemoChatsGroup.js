@@ -66,6 +66,7 @@ const DemoChatsGroup = () => {
           </Grid.Column>
           <Grid.Column width={10}>
             <DemoChatContainer
+            partner={selectedDialog.doctorName}
               chatsData={selectedDialog.dialog}
               onClick={ sendMessage}
             ></DemoChatContainer>

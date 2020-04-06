@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { List, Message, Input, Grid } from "semantic-ui-react";
+import { List, Message, Input, Grid, Header, Button } from "semantic-ui-react";
 
-const DemoChatContainer = ({ chatsData, onClick }) => {
+const DemoChatContainer = ({ chatsData, partner, onClick }) => {
   let [inputData, setInputData] = useState("");
   return (
     <>
@@ -11,14 +11,29 @@ const DemoChatContainer = ({ chatsData, onClick }) => {
         <Grid.Row
           style={{
             position: "relative",
-            paddingTop: "2rem",
             height: "700px",
           }}
         >
-          <List style={{
+          <Grid columns={2} verticalAlign="middle" relaxed="very" padded="vertically">
+            <Grid.Column>
+              <Header as="h3">{partner}</Header>
+            </Grid.Column>
+            <Grid.Column>
+              <Button
+                floated="right"
+                content="Video Call"
+                icon="video"
+                labelPosition="left"
+                color="teal"
+              ></Button>
+            </Grid.Column>
+          </Grid>
+          <List
+            style={{
               height: "90%",
-              overflowY: 'auto'
-          }}>
+              overflowY: "auto",
+            }}
+          >
             {chatsData.map((message, index) => (
               <Message info={message.partner} size="small" key={index}>
                 <Message.Header>{message.sender}</Message.Header>
@@ -39,9 +54,12 @@ const DemoChatContainer = ({ chatsData, onClick }) => {
             action={{
               color: "teal",
               content: "Send",
-              onClick: () => {onClick(inputData); setInputData("")},
+              onClick: () => {
+                inputData && onClick(inputData);
+                setInputData("");
+              },
             }}
-            placeholder="Input your message"
+            placeholder="Input your message..."
           />
         </Grid.Row>
       )}
