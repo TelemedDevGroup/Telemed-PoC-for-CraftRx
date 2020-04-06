@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Header, Menu, Container, Label, Tab, Icon } from 'semantic-ui-react'
 import DemoCalendar from './../components/DemoCalendar.js'
+import DemoChatsGroup from './../components/DemoChatsGroup.js'
 import PatientToDo from './PatientToDo.js'
 
 const BoardPanes = [
@@ -48,7 +49,7 @@ const BoardPanes = [
           Messenger
       </Menu.Item>
     ),
-    render: () => <Tab.Pane>Placeholder for Messenger component</Tab.Pane>,
+    render: () => <Tab.Pane><DemoChatsGroup/></Tab.Pane>,
   },
 ]
 
